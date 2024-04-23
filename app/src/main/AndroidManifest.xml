@@ -13,9 +13,17 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
-            android:name="estacio.acad.mobplacar.login"
+            android:name=".splash"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

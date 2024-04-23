@@ -3,5 +3,5 @@
     <string name="login_nome_usuario">Nome de usuário</string>
     <string name="login_senha_usuario">Senha de usuário</string>
     <string name="login_efetuar_login">Efetuar Login</string>
-    <string name="teste">Lucas</string>
+    <string name="splash_texto">Carregando a próxima activity...</string>
 </resources>
