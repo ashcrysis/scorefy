@@ -37,7 +37,7 @@
     <EditText
         android:layout_width="180dp"
         android:id="@+id/ed_senha"
-        android:inputType="text"
+        android:inputType="textPassword"
 
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
