@@ -38,7 +38,6 @@
         android:layout_width="180dp"
         android:id="@+id/ed_senha"
         android:inputType="textPassword"
-
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,4 +52,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ed_senha"
         />
+
+    <Button
+        android:id="@+id/execute_forgot_password"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/execute_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/execute_login_button" />
+
+    <Button
+        android:id="@+id/hide_password"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ed_senha"
+        app:layout_constraintStart_toEndOf="@+id/ed_senha"
+        app:layout_constraintTop_toBottomOf="@+id/tv_senha"
+        android:text="👁"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
