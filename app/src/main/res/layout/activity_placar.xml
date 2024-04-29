@@ -8,8 +8,8 @@
     tools:context=".placar">
 
     <Button
-        android:layout_width="match_parent"
-        android:text="aumentar número"
+        android:layout_width=""
+        android:text="0"
         android:id="@+id/botaoaumentarnumero"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,5 +17,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descer"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="89dp"
+        android:layout_height="47dp"
+        android:text="Subir"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subir"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descer"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="373dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
