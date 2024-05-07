@@ -20,7 +20,7 @@ class placar : AppCompatActivity() {
             insets
 
         }
-        val button: Button = findViewById(R.id.botaoaumentarnumero)
+       /* val button: Button = findViewById(R.id.botaoaumentarnumero)
         val intent: Intent = getIntent()
         val texto: String = intent.getStringExtra("teste").toString()
         button.setOnClickListener {
@@ -30,7 +30,7 @@ class placar : AppCompatActivity() {
             toast.show()
 
         }
-
+*/
 
     }
 }
