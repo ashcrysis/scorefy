@@ -3,6 +3,8 @@ package estacio.acad.mobplacar
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,17 +22,28 @@ class placar : AppCompatActivity() {
             insets
 
         }
-       /* val button: Button = findViewById(R.id.botaoaumentarnumero)
-        val intent: Intent = getIntent()
-        val texto: String = intent.getStringExtra("teste").toString()
-        button.setOnClickListener {
 
-            val toast =
-                Toast.makeText(this, texto, Toast.LENGTH_LONG) // in Activity
-            toast.show()
+        val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
+        val down_buttona: Button = findViewById(R.id.btn_diminuirtime_a)
 
+        val up_buttonb: Button = findViewById(R.id.btn_aumentartime_b)
+        val down_buttonb: Button = findViewById(R.id.btn_diminuirtime_b)
+
+        val tv_timea: TextView = findViewById(R.id.tv_time_a_pontos)
+        val tv_timeb: TextView = findViewById(R.id.tv_time_b_pontos)
+
+        up_buttona.setOnClickListener() {
+
+            var pontos:Int = Integer.parseInt(tv_timea.text.toString())
+            pontos = pontos + 1
+            tv_timea.setText(pontos)
         }
-*/
 
+        down_buttona.setOnClickListener() {
+
+            var pontos:Int = Integer.parseInt(tv_timea.text.toString())
+            pontos = pontos - 1
+            tv_timea.setText(pontos)
+        }
     }
 }
