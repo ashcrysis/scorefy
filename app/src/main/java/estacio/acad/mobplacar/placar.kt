@@ -35,15 +35,15 @@ class placar : AppCompatActivity() {
         up_buttona.setOnClickListener() {
 
             var pontos:Int = Integer.parseInt(tv_timea.text.toString())
-            pontos = pontos + 1
-            tv_timea.setText(pontos)
+            pontos += 1
+            tv_timea.text = pontos.toString()
         }
 
         down_buttona.setOnClickListener() {
 
             var pontos:Int = Integer.parseInt(tv_timea.text.toString())
-            pontos = pontos - 1
-            tv_timea.setText(pontos)
+            pontos -= 1
+            tv_timea.text = pontos.toString()
         }
     }
 }
