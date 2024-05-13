@@ -45,6 +45,17 @@
         app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b"
         android:layout_marginStart="5dp"/>
 
+    <Button
+        android:id="@+id/btn_finalizar"
+        android:text="FINALIZAR"
+        android:textSize="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
+        app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
+        android:layout_marginStart="40dp"/>
+
+
     <EditText
         android:id="@+id/edt_time_a"
         android:layout_width="250dp"
