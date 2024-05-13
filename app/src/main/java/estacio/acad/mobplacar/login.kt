@@ -21,6 +21,7 @@ class login : AppCompatActivity() {
         val auth = simpleAuth();
         auth.addUser("asher","123456")
         auth.addUser("lucas","12345")
+        auth.addUser("","")
         val button: Button = findViewById(R.id.execute_login_button)
         val edit_name: EditText = findViewById(R.id.ed_username)
         val edit_senha: EditText = findViewById(R.id.ed_senha)

@@ -1,18 +1,20 @@
 package estacio.acad.mobplacar
 
-import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import kotlinx.coroutines.delay
+
 
 class placar : AppCompatActivity() {
+
+    private var LAST_CLICK_TIME: Long = 0
+    private val mDoubleClickInterval = 400 // Milliseconds
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,15 +27,36 @@ class placar : AppCompatActivity() {
 
         }
 
-        private var startTime: Long = 0
-        private var timerHandler: Long = 0
-        private var timerRunnable: Long = 0
-        private var wireWidgets: Long = 0
+        var startTime: Long = 0
+        //var timerHandler: Long = 0
+        var timerRunnable: Long = 0
+        var wireWidgets: Long = 0
 
         startTime = System.currentTimeMillis()
-        timerHandler.postDelayed(timerRunnable, 0)
-        wireWidgets()
+        val timerHandler = Handler()
+        //timerHandler.postDelayed(timerRunnable, 0)
 
+        //#wireWidgets()
+
+
+
+        val button_rodada: Button = findViewById(R.id.rodada_button)
+        val tv_rodada: TextView = findViewById(R.id.rodada)
+        button_rodada.setOnClickListener()
+        {
+            val doubleClickCurrentTime = System.currentTimeMillis()
+            val currentClickTime = System.currentTimeMillis()
+            var Rodada_inLoop = Integer.parseInt(tv_rodada.text.toString())
+            if (currentClickTime - LAST_CLICK_TIME <= mDoubleClickInterval) {
+                Rodada_inLoop -= 2
+
+            } else {
+                LAST_CLICK_TIME = System.currentTimeMillis()
+                Rodada_inLoop += 1
+            }
+            tv_rodada.text = Rodada_inLoop.toString()
+
+        }
         val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
         val down_buttona: Button = findViewById(R.id.btn_diminuirtime_a)
 
@@ -42,7 +65,6 @@ class placar : AppCompatActivity() {
 
         val tv_timea: TextView = findViewById(R.id.tv_time_a_pontos)
         val tv_timeb: TextView = findViewById(R.id.tv_time_b_pontos)
-
 
         up_buttona.setOnClickListener() {
 

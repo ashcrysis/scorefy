@@ -137,8 +137,9 @@
     <Button
         android:id="@+id/rodada_button"
         android:layout_width="150dp"
+        android:background="@drawable/transparent"
         android:layout_height="150dp"
-        android:background=""
+        android:visibility="visible"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
         app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
