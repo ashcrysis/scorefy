@@ -55,7 +55,6 @@
         app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
         android:layout_marginStart="40dp"/>
 
-
     <EditText
         android:id="@+id/edt_time_a"
         android:layout_width="250dp"
@@ -64,7 +63,8 @@
         android:hint="@string/time_anome"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_a"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <EditText
         android:id="@+id/edt_time_b"
         android:layout_width="250dp"
@@ -109,8 +109,9 @@
         android:textSize="100dp"
         android:textAlignment="center"
         app:flow_horizontalAlign="center"
-        app:layout_editor_absoluteX="300dp"
-        app:layout_editor_absoluteY="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time_b_pontos"
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
+        android:layout_marginStart="15dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
