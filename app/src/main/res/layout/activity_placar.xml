@@ -47,13 +47,14 @@
 
     <Button
         android:id="@+id/btn_finalizar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="FINALIZAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finalizar_jogo"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
-        app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a" />
+        app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
+        app:layout_constraintTop_toBottomOf="@+id/contatempo" />
 
     <EditText
         android:id="@+id/edt_time_a"
@@ -100,7 +101,7 @@
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
         app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
 
-    <EditText
+    <TextView
         android:id="@+id/contatempo"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -109,8 +110,8 @@
         android:textAlignment="center"
         android:textSize="100dp"
         app:flow_horizontalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
-        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos" />
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
+        app:layout_constraintTop_toBottomOf="@+id/edt_time_a" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
