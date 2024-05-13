@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Background_campo"
+    android:background="@drawable/bg"
     tools:context=".login">
 
     <View
@@ -44,6 +44,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_senha" />
 
+    <Button
+        android:id="@+id/hide_password"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background=""
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/ed_senha" />
     <EditText
         android:id="@+id/ed_username"
         style="@style/ediText"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Background_campo"
+    android:background="@drawable/bg"
     tools:context=".login">
 
     <View
@@ -83,7 +83,7 @@
         style="@style/button"
         android:layout_width="118dp"
         android:layout_marginTop="48dp"
-        android:text="@string/login_efetuar_login"
+        android:text="@string/criar_conta_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"

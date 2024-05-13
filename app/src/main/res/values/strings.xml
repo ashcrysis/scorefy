@@ -7,4 +7,7 @@
     <string name="execute_forgot_password">Esqueci minha senha</string>
     <string name="time_anome">Nome do Time A</string>
     <string name="time_bnome">Nome do Time B</string>
+    <string name="titulo_login">Login</string>
+    <string name="titulo_tela_criar_conta">Cadastrar</string>
+    <string name="criar_conta_button">Criar conta</string>
 </resources>

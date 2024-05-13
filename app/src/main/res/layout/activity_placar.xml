@@ -14,7 +14,7 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="35dp"
         android:layout_marginBottom="10dp"/>
     <Button
         android:text="-"
@@ -33,7 +33,7 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="135dp"
         android:layout_marginBottom="10dp"/>
     <Button
         android:id="@+id/btn_diminuirtime_b"
