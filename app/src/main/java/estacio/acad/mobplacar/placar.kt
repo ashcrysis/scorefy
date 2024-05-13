@@ -10,8 +10,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlinx.coroutines.delay
 
 class placar : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,6 +24,15 @@ class placar : AppCompatActivity() {
             insets
 
         }
+
+        private var startTime: Long = 0
+        private var timerHandler: Long = 0
+        private var timerRunnable: Long = 0
+        private var wireWidgets: Long = 0
+
+        startTime = System.currentTimeMillis()
+        timerHandler.postDelayed(timerRunnable, 0)
+        wireWidgets()
 
         val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
         val down_buttona: Button = findViewById(R.id.btn_diminuirtime_a)
@@ -60,6 +71,6 @@ class placar : AppCompatActivity() {
             pontos -= 1
             tv_timeb.text = pontos.toString()
         }
-
+        }
     }
 }
