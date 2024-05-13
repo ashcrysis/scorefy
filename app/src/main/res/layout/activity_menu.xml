@@ -54,5 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/item_layout"
-        tools:itemCount="15"/>
+        tools:itemCount="15"
+        android:visibility="visible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
