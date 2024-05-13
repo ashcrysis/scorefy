@@ -32,6 +32,7 @@ class placar : AppCompatActivity() {
         val tv_timea: TextView = findViewById(R.id.tv_time_a_pontos)
         val tv_timeb: TextView = findViewById(R.id.tv_time_b_pontos)
 
+
         up_buttona.setOnClickListener() {
 
             var pontos:Int = Integer.parseInt(tv_timea.text.toString())
