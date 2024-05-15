@@ -135,14 +135,25 @@
         app:layout_constraintStart_toStartOf="@+id/rodada" />
 
     <Button
-        android:id="@+id/rodada_button"
+        android:id="@+id/rodada_up_button"
         android:layout_width="150dp"
         android:background="@drawable/transparent"
-        android:layout_height="150dp"
+        android:layout_height="75dp"
         android:visibility="visible"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
         app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
         app:layout_constraintTop_toBottomOf="@+id/edt_time_a"/>
+
+    <Button
+        android:id="@+id/rodada_down_button"
+        android:layout_width="150dp"
+        android:background="@drawable/transparent"
+        android:layout_height="75dp"
+        android:visibility="visible"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
+        app:layout_constraintTop_toBottomOf="@+id/rodada_up_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

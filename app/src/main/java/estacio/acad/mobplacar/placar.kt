@@ -40,21 +40,23 @@ class placar : AppCompatActivity() {
 
 
 
-        val button_rodada: Button = findViewById(R.id.rodada_button)
+        val button_up_rodada: Button = findViewById(R.id.rodada_up_button)
+        val button_down_rodada: Button = findViewById(R.id.rodada_down_button)
         val tv_rodada: TextView = findViewById(R.id.rodada)
-        button_rodada.setOnClickListener()
+        button_up_rodada.setOnClickListener()
         {
-            val doubleClickCurrentTime = System.currentTimeMillis()
-            val currentClickTime = System.currentTimeMillis()
-            var Rodada_inLoop = Integer.parseInt(tv_rodada.text.toString())
-            if (currentClickTime - LAST_CLICK_TIME <= mDoubleClickInterval) {
-                Rodada_inLoop -= 1
 
-            } else if (currentClickTime - LAST_CLICK_TIME > mDoubleClickInterval){
-                LAST_CLICK_TIME = System.currentTimeMillis()
-                Rodada_inLoop += 1
-            }
-            tv_rodada.text = Rodada_inLoop.toString()
+            var Rodada = Integer.parseInt(tv_rodada.text.toString())
+            Rodada += 1
+            tv_rodada.text = Rodada.toString()
+
+        }
+        button_down_rodada.setOnClickListener()
+        {
+
+            var Rodada = Integer.parseInt(tv_rodada.text.toString())
+            Rodada -= 1
+            tv_rodada.text = Rodada.toString()
 
         }
         val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
