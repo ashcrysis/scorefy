@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
+            android:name=".teste"
+            android:exported="false" />
+        <activity
             android:name=".cadastro"
             android:exported="false" />
         <activity
