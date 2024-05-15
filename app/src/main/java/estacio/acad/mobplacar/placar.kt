@@ -48,9 +48,9 @@ class placar : AppCompatActivity() {
             val currentClickTime = System.currentTimeMillis()
             var Rodada_inLoop = Integer.parseInt(tv_rodada.text.toString())
             if (currentClickTime - LAST_CLICK_TIME <= mDoubleClickInterval) {
-                Rodada_inLoop -= 2
+                Rodada_inLoop -= 1
 
-            } else {
+            } else if (currentClickTime - LAST_CLICK_TIME > mDoubleClickInterval){
                 LAST_CLICK_TIME = System.currentTimeMillis()
                 Rodada_inLoop += 1
             }
@@ -95,4 +95,3 @@ class placar : AppCompatActivity() {
         }
         }
     }
-}

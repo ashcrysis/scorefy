@@ -54,6 +54,16 @@
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
         app:layout_constraintTop_toBottomOf="@id/ed_username" />
 
+    <TextView
+        android:id="@+id/tv_senha_2"
+        style="@style/textview_itens"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:maxLength="25"
+        android:text="@string/login_senha_usuario_2"
+        app:layout_constraintEnd_toEndOf="@+id/containerLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ed_senha" />
     <EditText
         android:id="@+id/ed_senha"
         style="@style/ediText"
@@ -67,22 +77,36 @@
         app:layout_constraintStart_toStartOf="@+id/containerLogin"
         app:layout_constraintTop_toBottomOf="@id/tv_senha" />
 
+
+    <EditText
+        android:id="@+id/ed_senha_2"
+        style="@style/ediText"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:drawableRight="@drawable/ic_eye"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/containerLogin"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_senha_2" />
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/execute_criar_conta"
         style="@style/button"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:textSize="12sp"
         android:text="@string/criar_conta_button"
-        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
-        app:layout_constraintTop_toBottomOf="@+id/ed_senha" />
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ed_senha_2" />
 
     <Button
         android:id="@+id/hide_password"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background=""
+        android:background="@drawable/transparent"
         app:layout_constraintTop_toTopOf="@id/ed_senha"
         app:layout_constraintEnd_toEndOf="@+id/ed_senha"/>
 

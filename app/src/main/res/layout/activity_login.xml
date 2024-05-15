@@ -95,7 +95,7 @@
         android:id="@+id/execute_forgot_password"
         android:layout_width="180dp"
         android:layout_height="20dp"
-        android:background=""
+        android:background="@drawable/transparent"
         android:gravity="end"
         android:paddingVertical="2dp"
         android:text="@string/execute_forgot_password"
@@ -110,7 +110,7 @@
         android:id="@+id/hide_password"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background=""
+        android:background="@drawable/transparent"
         app:layout_constraintTop_toTopOf="@id/ed_senha"
         app:layout_constraintEnd_toEndOf="@+id/ed_senha"/>
 
