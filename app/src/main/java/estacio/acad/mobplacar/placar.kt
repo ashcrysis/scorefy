@@ -1,5 +1,6 @@
 package estacio.acad.mobplacar
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
@@ -42,6 +43,7 @@ class placar : AppCompatActivity() {
 
         val button_up_rodada: Button = findViewById(R.id.rodada_up_button)
         val button_down_rodada: Button = findViewById(R.id.rodada_down_button)
+        val button_finalizar_rodada: Button = findViewById(R.id.btn_finalizar)
         val tv_rodada: TextView = findViewById(R.id.rodada)
         button_up_rodada.setOnClickListener()
         {
@@ -58,6 +60,11 @@ class placar : AppCompatActivity() {
             Rodada -= 1
             tv_rodada.text = Rodada.toString()
 
+        }
+        button_finalizar_rodada.setOnClickListener()
+        {
+            val intent = Intent(this, menu::class.java)
+            startActivity(intent);
         }
         val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
         val down_buttona: Button = findViewById(R.id.btn_diminuirtime_a)
