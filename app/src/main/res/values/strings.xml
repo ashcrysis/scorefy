@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">MobPlacar</string>
     <string name="login_nome_usuario">Nome de usuário</string>
-    <string name="login_senha_usuario">Senha de usuário</string>
-    <string name="login_efetuar_login">Efetuar Login</string>
+    <string name="login_senha_usuario">Senha</string>
+    <string name="login_efetuar_login">Entrar</string>
+    <string name="criar_conta_button">Criar conta</string>
     <string name="splash_texto">Carregando a próxima activity...</string>
     <string name="execute_forgot_password">Esqueci minha senha</string>
     <string name="time_anome">Nome do Time A</string>
     <string name="time_bnome">Nome do Time B</string>
-    <string name="finalizar_jogo">FINALIZAR</string>
+    <string name="titulo_login">Login</string>
+    <string name="titulo_criar_conta">Crie sua conta</string>
+
+
 </resources>
