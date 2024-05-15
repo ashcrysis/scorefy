@@ -16,8 +16,8 @@ class login : AppCompatActivity() {
     var clicked:Boolean = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
+        val b_criar_conta: Button = findViewById(R.id.execute_criar_conta)
         val auth = simpleAuth();
         auth.addUser("asher","123456")
         auth.addUser("lucas","12345")
@@ -42,6 +42,15 @@ class login : AppCompatActivity() {
             }
 
         }
+
+
+        b_criar_conta.setOnClickListener {
+
+            val intent = Intent(this, cadastro::class.java)
+            startActivity(intent);
+
+        }
+
         buttonViewPassword.setOnClickListener {
             edit_senha.tag = !((edit_senha.tag ?: false) as Boolean)
             edit_senha.inputType = if (edit_senha.tag as Boolean)
