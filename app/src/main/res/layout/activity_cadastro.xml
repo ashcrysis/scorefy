@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:text="@string/login_nome_usuario"
         app:layout_constraintBottom_toTopOf="@id/ed_username"
-        app:layout_constraintStart_toStartOf="@id/ed_username"
-        app:layout_constraintEnd_toEndOf="@id/ed_username" />
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintEnd_toEndOf="@+id/containerLogin" />
 
     <EditText
         android:id="@+id/ed_username"
@@ -73,7 +73,6 @@
         android:drawableRight="@drawable/ic_eye"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="@+id/containerLogin"
         app:layout_constraintTop_toBottomOf="@id/tv_senha" />
 
@@ -86,7 +85,6 @@
         android:drawableRight="@drawable/ic_eye"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="@+id/containerLogin"
         app:layout_constraintTop_toBottomOf="@+id/tv_senha_2" />
 
@@ -96,6 +94,8 @@
         style="@style/button"
         android:layout_width="120dp"
         android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/criar_conta_button"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"

@@ -11,7 +11,10 @@
     <string name="time_bnome">Nome do Time B</string>
     <string name="titulo_login">Login</string>
     <string name="titulo_criar_conta">Crie sua conta</string>
+    <string name="btn_aumentartime_a">+</string>
+    <string name="btn_diminuirtime_a">-</string>
+    <string name="btn_aumentartime_b">+</string>
+    <string name="btn_diminuirtime_b">-</string>
     <string name="finalizar_jogo">FINALIZAR</string>
-
 
 </resources>

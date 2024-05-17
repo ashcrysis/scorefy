@@ -6,10 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".placar">
+
     <Button
-        android:text="+"
-        android:textSize="50dp"
         android:id="@+id/btn_aumentartime_a"
+        android:text="@string/btn_aumentartime_a"
+        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,9 +18,9 @@
         android:layout_marginStart="35dp"
         android:layout_marginBottom="10dp"/>
     <Button
-        android:text="-"
-        android:textSize="50dp"
         android:id="@+id/btn_diminuirtime_a"
+        android:text="@string/btn_diminuirtime_a"
+        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_a"
@@ -27,8 +28,8 @@
         android:layout_marginStart="5dp"/>
     <Button
         android:id="@+id/btn_aumentartime_b"
-        android:text="+"
-        android:textSize="50dp"
+        android:text="@string/btn_aumentartime_b"
+        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,8 +38,8 @@
         android:layout_marginBottom="10dp"/>
     <Button
         android:id="@+id/btn_diminuirtime_b"
-        android:text="-"
-        android:textSize="50dp"
+        android:text="@string/btn_diminuirtime_b"
+        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_b"
@@ -50,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/finalizar_jogo"
-        android:textSize="10dp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
@@ -82,7 +83,7 @@
         android:layout_height="200dp"
         android:layout_marginHorizontal="10dp"
         android:text="0"
-        android:textSize="100dp"
+        android:textSize="100sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
@@ -94,7 +95,7 @@
         android:layout_height="200dp"
         android:layout_marginHorizontal="10dp"
         android:text="0"
-        android:textSize="100dp"
+        android:textSize="100sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_b"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
@@ -118,7 +119,7 @@
         android:layout_marginHorizontal="10dp"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="100dp"
+        android:textSize="100sp"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
         app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
@@ -148,12 +149,13 @@
     <Button
         android:id="@+id/rodada_down_button"
         android:layout_width="150dp"
-        android:background="@drawable/transparent"
         android:layout_height="75dp"
+        android:background="@drawable/transparent"
         android:visibility="visible"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
-        app:layout_constraintTop_toBottomOf="@+id/rodada_up_button"/>
+        app:layout_constraintTop_toBottomOf="@+id/rodada_up_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
