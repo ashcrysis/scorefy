@@ -15,6 +15,11 @@
     <string name="btn_diminuirtime_a">-</string>
     <string name="btn_aumentartime_b">+</string>
     <string name="btn_diminuirtime_b">-</string>
+    <string name="contador_placar">00:00</string>
+    <string name="tv_time_a_pontos">0</string>
+    <string name="tv_time_b_pontos">0</string>
+    <string name="tv_titulo_rodada">Rodada</string>
+    <string name="tv_valor_rodada">0</string>
     <string name="finalizar_jogo">FINALIZAR</string>
 
 </resources>
