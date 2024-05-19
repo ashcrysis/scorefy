@@ -20,6 +20,8 @@
     <string name="tv_time_b_pontos">0</string>
     <string name="tv_titulo_rodada">Rodada</string>
     <string name="tv_valor_rodada">0</string>
+    <string name="tv_usuario_logado">Seja bem vindo, USUÁRIO.</string>
+    <string name="texto_bt_adcionar">+</string>
     <string name="finalizar_jogo">FINALIZAR</string>
 
 </resources>

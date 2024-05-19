@@ -160,13 +160,14 @@
     <Button
         android:id="@+id/rodada_up_button"
         android:layout_width="150dp"
-        android:background="@drawable/transparent"
         android:layout_height="75dp"
+        android:background="@drawable/transparent"
         android:visibility="visible"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toStartOf="@id/tv_time_b_pontos"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
-        app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
 
     <Button
         android:id="@+id/rodada_down_button"
