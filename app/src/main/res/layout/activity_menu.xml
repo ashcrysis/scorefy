@@ -15,27 +15,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/new_game_button"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="10dp"
+        android:text="@string/texto_bt_adcionar"
         android:layout_marginBottom="20dp"
         android:background="@drawable/roundedbutton"
-        android:textSize="40dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/new_game_button"
-        app:layout_constraintTop_toTopOf="@id/new_game_button"
-        app:layout_constraintEnd_toEndOf="@id/new_game_button"
-        app:layout_constraintStart_toStartOf="@id/new_game_button"
-        android:src="@drawable/plus"
-
-        />
 
     <ImageView
         android:layout_width="324dp"
@@ -43,17 +34,44 @@
         android:src="@drawable/shape_purple_200"
         app:layout_constraintTop_toTopOf="@id/recyclerView"
         app:layout_constraintEnd_toEndOf="@id/recyclerView"
-        app:layout_constraintStart_toStartOf="@id/recyclerView"
-        />
+        app:layout_constraintStart_toStartOf="@id/recyclerView"/>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/perfil_11"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="340dp"
         android:layout_height="400dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/item_layout"
         tools:itemCount="15"
-        android:visibility="visible"/>
+        tools:listitem="@layout/item_layout" />
+
+    <TextView
+        android:id="@+id/tv_usuario_logado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_usuario_logado"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.4"
+         app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
