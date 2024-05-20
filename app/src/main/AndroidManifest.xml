@@ -13,24 +13,21 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
-            android:name=".teste"
-            android:exported="false"/>
-        <activity
             android:name=".cadastro"
-            android:exported="false" />
-        <activity
-            android:name=".criar_conta"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".placar"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".menu"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".splash"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -38,7 +35,8 @@
         </activity>
         <activity
             android:name=".login"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

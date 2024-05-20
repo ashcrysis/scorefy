@@ -8,11 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
-import estacio.acad.mobplacar.model.Log
-import estacio.acad.mobplacar.model.Logs
 
 class menu : AppCompatActivity() {
-    private var logAdapter: logAdapter? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,10 +21,6 @@ class menu : AppCompatActivity() {
 
 
         }
-        val rv = findViewById<RecyclerView>(R.id.recyclerView)
-        val logs: List<Log> = Logs.fakeLog()
-        logAdapter = logAdapter(logs)
-        rv.adapter = logAdapter
 
         val button: Button = findViewById(R.id.new_game_button)
 
