@@ -23,5 +23,7 @@
     <string name="tv_usuario_logado">Seja bem vindo, USUÁRIO.</string>
     <string name="texto_bt_adcionar">+</string>
     <string name="finalizar_jogo">FINALIZAR</string>
+    <string name="cadastro_email">Email</string>
+
 
 </resources>
