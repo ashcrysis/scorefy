@@ -39,7 +39,7 @@ class placar : AppCompatActivity() {
 
         //#wireWidgets()
 
-
+        val username: String? = intent.getStringExtra("username")
 
         val button_up_rodada: Button = findViewById(R.id.rodada_up_button)
         val button_down_rodada: Button = findViewById(R.id.rodada_down_button)
@@ -64,6 +64,7 @@ class placar : AppCompatActivity() {
         button_finalizar_rodada.setOnClickListener()
         {
             val intent = Intent(this, menu::class.java)
+            intent.putExtra("username" , username )
             startActivity(intent);
         }
         val up_buttona: Button = findViewById(R.id.btn_aumentartime_a)
