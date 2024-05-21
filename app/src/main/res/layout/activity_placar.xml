@@ -9,49 +9,49 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_aumentartime_a"
-        android:text="@string/btn_aumentartime_a"
         style="@style/button"
-        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="35dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_aumentartime_a"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_diminuirtime_a"
-        android:text="@string/btn_diminuirtime_a"
         style="@style/button"
-        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/btn_diminuirtime_a"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_a"
-        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_a"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_a" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_aumentartime_b"
-        android:text="@string/btn_aumentartime_b"
         style="@style/button"
-        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="135dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_aumentartime_b"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_diminuirtime_b"
-        android:text="@string/btn_diminuirtime_b"
         style="@style/button"
-        android:textSize="50sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/btn_diminuirtime_b"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_b"
-        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_finalizar"
@@ -70,26 +70,26 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
+        android:hint="@string/time_anome"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:hint="@string/time_anome"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_a"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edt_time_b"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         android:layout_marginTop="50dp"
+        android:hint="@string/time_bnome"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
-        android:hint="@string/time_bnome"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_time_a_pontos"
@@ -97,37 +97,38 @@
         android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
         android:text="@string/tv_time_a_pontos"
-        android:textSize="100sp"
         android:textAlignment="center"
+        android:textSize="100sp"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_a"
-        app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
+
     <TextView
         android:id="@+id/tv_time_b_pontos"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
         android:text="@string/tv_time_b_pontos"
-        android:textSize="100sp"
         android:textAlignment="center"
+        android:textSize="100sp"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_b"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
-        app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
 
-    <TextView
-        android:id="@+id/contador"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="@string/contador_placar"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
-        app:layout_constraintEnd_toEndOf="@+id/rodada"
-        app:layout_constraintStart_toStartOf="@+id/rodada"
-        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+    <!--<TextView
+    android:id="@+id/contador"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:text="@string/contador_placar"
+    android:textAlignment="center"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
+    app:layout_constraintEnd_toEndOf="@+id/rodada"
+    app:layout_constraintStart_toStartOf="@+id/rodada"
+    app:layout_constraintTop_toBottomOf="@+id/rodada" />-->
 
     <TextView
         android:id="@+id/rodada"
@@ -176,9 +177,23 @@
         android:background="@drawable/transparent"
         android:visibility="visible"
         app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@id/rodada"
         app:layout_constraintEnd_toStartOf="@id/tv_time_b_pontos"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
-         app:layout_constraintBottom_toBottomOf="@id/rodada"/>
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos" />
+
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
+        android:text="00:00:00"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_finalizar"
+        app:layout_constraintStart_toStartOf="@+id/btn_finalizar"
+        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
