@@ -33,6 +33,7 @@ class login : AppCompatActivity() {
             if (auth.verifyCredentials(texto_nome,texto_senha))
             {
                 val intent = Intent(this, menu::class.java)
+                intent.putExtra("username",texto_nome)
                 startActivity(intent);
             }
             else

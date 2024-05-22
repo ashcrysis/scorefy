@@ -11,7 +11,7 @@
         android:id="@+id/containerLogin"
         style="@style/container"
         android:layout_width="match_parent"
-        android:layout_height="510dp"
+        android:layout_height="520dp"
         android:layout_marginHorizontal="40dp"
         android:alpha="0.6"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,6 +30,16 @@
         app:layout_constraintStart_toStartOf="@+id/containerLogin"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin" />
 
+    <TextView
+        android:id="@+id/tv_email"
+        style="@style/textview_itens"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_email"
+        app:layout_constraintBottom_toTopOf="@+id/ed_email"
+        app:layout_constraintEnd_toEndOf="@id/ed_username"
+        app:layout_constraintStart_toStartOf="@id/ed_username" />
+
     <EditText
         android:id="@+id/ed_username"
         style="@style/ediText"
@@ -37,12 +47,23 @@
         android:inputType="text"
         android:maxLength="25"
         android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintStart_toStartOf="@+id/containerLogin"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
         app:layout_constraintTop_toTopOf="@+id/containerLogin"
-        app:layout_constraintBottom_toBottomOf="@+id/containerLogin"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/containerLogin"/>
+
+    <EditText
+        android:id="@+id/ed_email"
+        style="@style/ediText"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintBottom_toTopOf="@+id/ed_senha"
+        app:layout_constraintEnd_toEndOf="@+id/containerLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ema" />
     <TextView
         android:id="@+id/tv_senha"
         style="@style/textview_itens"
@@ -116,12 +137,12 @@
         android:layout_height="wrap_content"
         android:text="@string/titulo_criar_conta"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="38sp"
-        app:layout_constraintTop_toTopOf="@+id/containerLogin"
-        app:layout_constraintBottom_toBottomOf="@id/containerLogin"
-        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_email"
         app:layout_constraintEnd_toEndOf="@+id/containerLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toTopOf="@+id/containerLogin"
         app:layout_constraintVertical_bias="0.15" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
