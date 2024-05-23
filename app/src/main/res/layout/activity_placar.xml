@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <!-- <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_finalizar"
         style="@style/button"
         android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
         app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
-        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+        app:layout_constraintTop_toBottomOf="@+id/rodada" /> -->
 
     <EditText
         android:id="@+id/edt_time_a"
@@ -116,19 +116,6 @@
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
         app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
-
-    <!--<TextView
-    android:id="@+id/contador"
-    android:layout_width="100dp"
-    android:layout_height="wrap_content"
-    android:text="@string/contador_placar"
-    android:textAlignment="center"
-    android:textSize="16sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
-    app:layout_constraintEnd_toEndOf="@+id/rodada"
-    app:layout_constraintStart_toStartOf="@+id/rodada"
-    app:layout_constraintTop_toBottomOf="@+id/rodada" />-->
 
     <TextView
         android:id="@+id/rodada"
@@ -184,16 +171,50 @@
 
 
     <TextView
-        android:id="@+id/timerTextView"
-        android:layout_width="146dp"
-        android:layout_height="0dp"
-        android:text="00:00:00"
-        android:textSize="30sp"
+        android:id="@+id/contador"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_placar"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finalizar"
-        app:layout_constraintEnd_toEndOf="@+id/btn_finalizar"
-        app:layout_constraintStart_toStartOf="@+id/btn_finalizar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pausar"
+        app:layout_constraintEnd_toEndOf="@+id/rodada"
+        app:layout_constraintStart_toStartOf="@+id/rodada"
         app:layout_constraintTop_toBottomOf="@+id/rodada" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        style="@style/button"
+        android:text="▶"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pausar"
+        app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
+        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+
+    <Button
+        android:id="@+id/pausar"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        style="@style/button"
+        android:text="||"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
+        app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
+        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+
+    <Button
+        android:id="@+id/resetar"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        style="@style/button"
+        android:text="↺"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
+        app:layout_constraintStart_toEndOf="@+id/pausar"
+        app:layout_constraintTop_toBottomOf="@+id/rodada"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
