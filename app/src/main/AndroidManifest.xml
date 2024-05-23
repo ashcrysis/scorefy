@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
+            android:name=".contadormain"
+            android:exported="false" />
+        <activity
+            android:name=".contador"
+            android:exported="false" />
+        <activity
             android:name=".Timer1"
             android:exported="false" />
         <activity

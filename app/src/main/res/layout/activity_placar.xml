@@ -53,18 +53,6 @@
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b" />
 
-    <!-- <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_finalizar"
-        style="@style/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/finalizar_jogo"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
-        app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
-        app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
-        app:layout_constraintTop_toBottomOf="@+id/rodada" /> -->
-
     <EditText
         android:id="@+id/edt_time_a"
         android:layout_width="250dp"
@@ -185,10 +173,9 @@
 
     <Button
         android:id="@+id/start"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
-        style="@style/button"
-        android:text="▶"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/baseline_play_arrow_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/pausar"
         app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
@@ -196,10 +183,9 @@
 
     <Button
         android:id="@+id/pausar"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
-        style="@style/button"
-        android:text="||"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/baseline_adjust_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
@@ -207,10 +193,9 @@
 
     <Button
         android:id="@+id/resetar"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
-        style="@style/button"
-        android:text="↺"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/baseline_autorenew_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
         app:layout_constraintStart_toEndOf="@+id/pausar"
