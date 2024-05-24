@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
+            android:name=".contador_p2"
+            android:exported="false" />
+        <activity
             android:name=".contadormain"
             android:exported="false" />
         <activity
@@ -47,6 +50,8 @@
             android:name=".login"
             android:exported="true"
             android:screenOrientation="portrait" />
+
+        <service android:name=".TimerService" />
     </application>
 
 </manifest>
