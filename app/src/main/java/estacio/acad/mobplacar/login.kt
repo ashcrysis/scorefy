@@ -16,11 +16,12 @@ class login : AppCompatActivity() {
     var clicked:Boolean = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
+        val b_criar_conta: Button = findViewById(R.id.execute_criar_conta)
         val auth = simpleAuth();
         auth.addUser("asher","123456")
         auth.addUser("lucas","12345")
+        auth.addUser("","")
         val button: Button = findViewById(R.id.execute_login_button)
         val edit_name: EditText = findViewById(R.id.ed_username)
         val edit_senha: EditText = findViewById(R.id.ed_senha)
@@ -32,6 +33,7 @@ class login : AppCompatActivity() {
             if (auth.verifyCredentials(texto_nome,texto_senha))
             {
                 val intent = Intent(this, menu::class.java)
+                intent.putExtra("username",texto_nome)
                 startActivity(intent);
             }
             else
@@ -41,6 +43,15 @@ class login : AppCompatActivity() {
             }
 
         }
+
+
+        b_criar_conta.setOnClickListener {
+
+            val intent = Intent(this, cadastro::class.java)
+            startActivity(intent);
+
+        }
+
         buttonViewPassword.setOnClickListener {
             edit_senha.tag = !((edit_senha.tag ?: false) as Boolean)
             edit_senha.inputType = if (edit_senha.tag as Boolean)

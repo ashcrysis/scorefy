@@ -6,44 +6,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".placar">
-    <Button
-        android:text="+"
-        android:textSize="50dp"
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_aumentartime_a"
+        style="@style/button"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="35dp"
-        android:layout_marginBottom="10dp"/>
-    <Button
-        android:text="-"
-        android:textSize="50dp"
-        android:id="@+id/btn_diminuirtime_a"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_a"
-        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_a"
-        android:layout_marginStart="5dp"/>
-    <Button
-        android:id="@+id/btn_aumentartime_b"
-        android:text="+"
-        android:textSize="50dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_aumentartime_a"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="10dp"/>
-    <Button
-        android:id="@+id/btn_diminuirtime_b"
-        android:text="-"
-        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_diminuirtime_a"
+        style="@style/button"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/btn_diminuirtime_a"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_a"
+        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_a" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_aumentartime_b"
+        style="@style/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_aumentartime_b"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_diminuirtime_b"
+        style="@style/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/btn_diminuirtime_b"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_b"
-        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintStart_toEndOf="@id/btn_aumentartime_b" />
 
     <EditText
         android:id="@+id/edt_time_a"
@@ -51,43 +59,143 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:hint="@string/time_anome"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_a"
         app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/edt_time_b"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/time_bnome"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
-        android:hint="@string/time_bnome"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_time_a_pontos"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
-        android:text="0"
-        android:textSize="100dp"
+        android:text="@string/tv_time_a_pontos"
         android:textAlignment="center"
+        android:textSize="100sp"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_a"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_a"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_a"
-        app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
+
     <TextView
         android:id="@+id/tv_time_b_pontos"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
-        android:text="0"
-        android:textSize="100dp"
+        android:text="@string/tv_time_b_pontos"
         android:textAlignment="center"
+        android:textSize="100sp"
         app:layout_constraintBottom_toTopOf="@id/btn_diminuirtime_b"
         app:layout_constraintEnd_toEndOf="@id/btn_diminuirtime_b"
         app:layout_constraintStart_toStartOf="@id/btn_aumentartime_b"
-        app:layout_constraintTop_toBottomOf="@id/edt_time_a"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
 
+    <TextView
+        android:id="@+id/rodada"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/tv_valor_rodada"
+        android:textAlignment="center"
+        android:textSize="100sp"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_b_pontos"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
+        app:layout_constraintTop_toBottomOf="@+id/edt_time_a" />
+
+    <TextView
+        android:id="@+id/tv_titulo_rodada"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/tv_titulo_rodada"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rodada"
+        app:layout_constraintEnd_toEndOf="@+id/rodada"
+        app:layout_constraintStart_toStartOf="@+id/rodada" />
+
+
+    <Button
+        android:id="@+id/rodada_up_button"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_b_pontos"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos"
+        app:layout_constraintTop_toBottomOf="@id/edt_time_a" />
+
+    <Button
+        android:id="@+id/rodada_down_button"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toBottomOf="@id/rodada"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_b_pontos"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@id/tv_time_a_pontos" />
+
+    <TextView
+        android:id="@+id/timer_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/rodada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=">"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stop_button"
+        app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
+        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="||"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reset_button"
+        app:layout_constraintStart_toEndOf="@id/start_button"
+        app:layout_constraintTop_toBottomOf="@id/timer_text_view" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↺"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
+        app:layout_constraintStart_toEndOf="@id/stop_button"
+        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
