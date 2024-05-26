@@ -13,9 +13,21 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
+            android:name=".contador_p2"
+            android:exported="false" />
+        <activity
+            android:name=".contadormain"
+            android:exported="false" />
+        <activity
+            android:name=".contador"
+            android:exported="false" />
+        <activity
+            android:name=".Timer1"
+            android:exported="false" />
+        <activity
             android:name=".cadastro"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".placar"
             android:exported="false"
@@ -23,20 +35,23 @@
         <activity
             android:name=".menu"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".splash"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".login"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+
+        <service android:name=".TimerService" />
     </application>
 
 </manifest>
