@@ -3,5 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:ignore="ExtraText">
     android:shape="rectangle">
+    <solid android:color="@color/backgroundcolor"/>
+    <stroke android:color="@color/borda_tela_color" android:width="25dp"/>
 </shape>
-

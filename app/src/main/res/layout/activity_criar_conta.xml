@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".login">
+
+    <View
+        android:id="@+id/containerLogin"
+        style="@style/container"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:layout_marginHorizontal="40dp"
+        android:alpha="0.6"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toEndtOf="parent"
+        app:layout_constraintBaseline_toStartOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="74dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/textview"
+        android:text="@string/login_nome_usuario"
+        app:layout_constraintEnd_toEndOf="@+id/containerLogin"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <EditText
+        android:id="@+id/ed_senha"
+        style="@style/ediText"
+        android:layout_marginTop="4dp"
+        android:drawableRight="@drawable/ic_eye"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_senha" />
+
+    <EditText
+        android:id="@+id/ed_username"
+        style="@style/ediText"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <TextView
+        android:id="@+id/tv_senha"
+        style="@style/textview"
+        android:maxLength="25"
+        android:text="@string/login_senha_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_username" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/textview"
+        android:layout_width="140dp"
+        android:layout_height="17dp"
+        android:text="@string/execute_forgot_password"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/execute_login_button"
+        style="@style/button"
+        android:layout_width="118dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/criar_conta_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_senha" />
+
+
+    <TextView
+        android:id="@+id/textView_criar_conta"
+        style="@style/textview"
+        android:layout_width="270dp"
+        android:layout_height="63dp"
+        android:text="@string/titulo_tela_criar_conta"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="110dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
