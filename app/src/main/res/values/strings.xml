@@ -24,6 +24,5 @@
     <string name="texto_bt_adcionar">+</string>
     <string name="finalizar_jogo">FINALIZAR</string>
     <string name="cadastro_email">Email</string>
-
-
+    <string name="titulo_tela_criar_conta">Criar conta</string>
 </resources>
