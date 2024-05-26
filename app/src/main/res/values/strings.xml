@@ -25,4 +25,8 @@
     <string name="finalizar_jogo">FINALIZAR</string>
     <string name="cadastro_email">Email</string>
     <string name="titulo_tela_criar_conta">Criar conta</string>
+    <string name="start_button">></string>
+    <string name="stop_button">||</string>
+    <string name="reset_button">↺</string>
+    <string name="timer_text_view">00:00:00</string>
 </resources>
