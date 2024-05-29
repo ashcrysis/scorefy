@@ -29,4 +29,6 @@
     <string name="stop_button">||</string>
     <string name="reset_button">↺</string>
     <string name="timer_text_view">00:00:00</string>
+    <string name="tv_titulo_time_a">TIME A</string>
+    <string name="tv_titulo_time_b">TIME B</string>
 </resources>
