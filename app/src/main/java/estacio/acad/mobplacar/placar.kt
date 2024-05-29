@@ -9,7 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.util.*
+import java.util.Locale
 
 class placar : AppCompatActivity() {
 
@@ -18,12 +18,15 @@ class placar : AppCompatActivity() {
     private lateinit var resetButton: Button
     private lateinit var timerTextView: TextView
 
+    var stopTime: Long = 0
     private var startTime: Long = 0
     private var isRunning: Boolean = false
     private val handler = Handler(Looper.getMainLooper())
-
+    private var hasRunned: Boolean = false
+    private var elapsedTime: Long = 0
     private var LAST_CLICK_TIME: Long = 0
     private val mDoubleClickInterval = 400 // Milliseconds
+    private var stoppedTime: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,7 +109,10 @@ class placar : AppCompatActivity() {
 
     private fun startChronometer() {
         if (!isRunning) {
-            startTime = System.currentTimeMillis()
+            if (!hasRunned) {
+                startTime = System.currentTimeMillis()
+                hasRunned = true
+            }
             isRunning = true
             startButton.isEnabled = false
             stopButton.isEnabled = true
@@ -118,25 +124,29 @@ class placar : AppCompatActivity() {
             isRunning = false
             startButton.isEnabled = true
             stopButton.isEnabled = false
+            stoppedTime = System.currentTimeMillis()
         }
     }
 
     private fun resetChronometer() {
         startTime = 0
+        elapsedTime = 0
         timerTextView.text = "00:00:00"
         startButton.isEnabled = true
-        stopButton.isEnabled = false
+        startTime = System.currentTimeMillis()
     }
 
     private fun updateChronometer() {
         if (isRunning) {
-            val elapsedTime = System.currentTimeMillis() - startTime
+            elapsedTime = System.currentTimeMillis() - startTime
             val seconds = (elapsedTime / 1000).toInt()
             val minutes = seconds / 60
-            val hours = minutes / 60
-            val displaySeconds = seconds % 60
-            val displayMinutes = minutes % 60
+            var hours = (minutes / 60)
+            var displaySeconds = (seconds % 60)
+            var displayMinutes = (minutes % 60)
+
             timerTextView.text = String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, displayMinutes, displaySeconds)
         }
+
     }
 }
