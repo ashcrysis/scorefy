@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_vertical_placar"
     tools:context=".placar">
 
     <androidx.appcompat.widget.AppCompatButton
@@ -61,7 +62,7 @@
         android:id="@+id/edt_time_a"
         android:layout_width="170dp"
         android:layout_height="50dp"
-        android:background="@color/black"
+        android:background="@drawable/shape_desing_editext"
         android:textAlignment="center"
         android:textSize="16sp"
         android:layout_marginTop="20dp"
@@ -78,7 +79,7 @@
         android:layout_height="50dp"
         android:hint="@string/time_bnome"
         android:textAlignment="center"
-        android:background="@color/black"
+        android:background="@drawable/shape_desing_editext"
         android:textSize="16sp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
@@ -95,7 +96,7 @@
         android:layout_height="150dp"
         android:text="@string/tv_time_a_pontos"
         android:gravity="center"
-        android:background="@color/black"
+        android:background="@drawable/shape_desing_textview"
         android:textColor="@color/white"
         android:textSize="90sp"
         android:layout_marginTop="15dp"
@@ -109,7 +110,7 @@
         android:layout_height="150dp"
         android:text="@string/tv_time_b_pontos"
         android:gravity="center"
-        android:background="@color/black"
+        android:background="@drawable/shape_desing_textview"
         android:textColor="@color/white"
         android:textSize="90sp"
         android:layout_marginTop="15dp"
@@ -121,8 +122,8 @@
         android:id="@+id/rodada"
         android:layout_width="120dp"
         android:layout_height="130dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/black"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_desing_textview"
         android:gravity="center"
         android:text="@string/tv_valor_rodada"
         android:textColor="@color/white"
@@ -139,6 +140,7 @@
         android:layout_marginHorizontal="10dp"
         android:text="@string/tv_titulo_rodada"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
@@ -173,7 +175,7 @@
     <TextView
         android:id="@+id/timer_text_view"
         style="@style/textview_itens"
-        android:background="@color/black"
+        android:background="@drawable/shape_desing_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/timer_text_view"
@@ -222,24 +224,26 @@
 
     <TextView
         android:id="@+id/tv_titulo_time_a"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_titulo_time_a"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@id/edt_time_a"
-        app:layout_constraintStart_toStartOf="@id/tv_time_a_pontos"
-        app:layout_constraintEnd_toEndOf="@id/tv_time_a_pontos" />
+        app:layout_constraintStart_toStartOf="@id/edt_time_a"
+         />
 
     <TextView
         android:id="@+id/tv_titulo_time_b"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_titulo_time_b"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@id/edt_time_b"
-        app:layout_constraintStart_toStartOf="@id/tv_time_b_pontos"
-        app:layout_constraintEnd_toEndOf="@id/tv_time_b_pontos" />
+        app:layout_constraintStart_toStartOf="@id/edt_time_b"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
