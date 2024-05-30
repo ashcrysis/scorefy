@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="backgroundcolor">#282828</color>
     <color name="borda_tela_color">#353535</color>
-    <color name="bordacolor">#FFFFFFFF</color>
+    <color name="bordacolor">#8C8C8C</color>
     <color name="transparent_color">#00FFFFFF</color>
 </resources>
