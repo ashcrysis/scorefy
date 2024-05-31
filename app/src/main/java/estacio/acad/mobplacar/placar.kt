@@ -81,6 +81,11 @@ class placar : AppCompatActivity() {
             pontos += 1
             tv_timeb.text = pontos.toString()
         }
+        down_buttonb.setOnClickListener {
+            var pontos: Int = Integer.parseInt(tv_timeb.text.toString())
+            pontos -= 1
+            tv_timeb.text = pontos.toString()
+        }
 
         // Inicializando os botões e TextView do cronômetro
         startButton = findViewById(R.id.start_button)
