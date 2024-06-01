@@ -5,7 +5,7 @@
     <string name="login_senha_usuario_2">Repita sua senha</string>
     <string name="login_efetuar_login">Entrar</string>
     <string name="criar_conta_button">Criar conta</string>
-    <string name="splash_texto">Carregando a próxima activity...</string>
+    <string name="splash_texto">Carregando próxima tela...</string>
     <string name="execute_forgot_password">Esqueci minha senha</string>
     <string name="time_anome">Nome do Time A</string>
     <string name="time_bnome">Nome do Time B</string>
@@ -31,4 +31,8 @@
     <string name="timer_text_view">00:00:00</string>
     <string name="tv_titulo_time_a">TIME A</string>
     <string name="tv_titulo_time_b">TIME B</string>
+    <string name="tv_user">USERNAME</string>
+    <string name="button_novo_placar">Novo placar</string>
+    <string name="button_estatisticas">Estatísticas</string>
+    <string name="button_ajustes">Ajustes</string>
 </resources>
