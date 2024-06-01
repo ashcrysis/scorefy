@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/background_vertical_placar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".menu">
@@ -16,31 +17,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/image_logo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/logo_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <Button
         android:id="@+id/new_game_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/texto_bt_adcionar"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/roundedbutton"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/icons8_lixeira_96"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
+        android:id="@+id/image_fundo_reciclerView"
         android:layout_width="324dp"
-        android:layout_height="400dp"
+        android:layout_height="320dp"
         android:src="@drawable/shape_purple_200"
         app:layout_constraintTop_toTopOf="@id/recyclerView"
         app:layout_constraintEnd_toEndOf="@id/recyclerView"
         app:layout_constraintStart_toStartOf="@id/recyclerView"/>
 
-
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/perfil_11"
+        android:id="@+id/image_perfil_usuario"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/perfil_1"
         app:layout_constraintBottom_toBottomOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="@id/imageView"
         app:layout_constraintHorizontal_bias="0.03"
@@ -48,15 +59,25 @@
         app:layout_constraintTop_toTopOf="@id/imageView"
         app:layout_constraintVertical_bias="0.5" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_sair"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/icons8_sair_50_white"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="340dp"
-        android:layout_height="400dp"
+        android:layout_width="334dp"
+        android:layout_height="318dp"
+        android:layout_marginTop="190dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
         tools:itemCount="15"
         tools:listitem="@layout/item_layout" />
 
@@ -68,7 +89,7 @@
         android:textColor="@color/white"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.25"
          app:layout_constraintStart_toStartOf="@id/imageView"
         app:layout_constraintEnd_toEndOf="@id/imageView"
         app:layout_constraintTop_toTopOf="@id/imageView"
@@ -78,7 +99,7 @@
         android:id="@+id/tv_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USERNAME"
+        android:text="@string/tv_user"
         android:textColor="@color/white"
         android:textSize="17sp"
         android:layout_marginStart="5dp"
@@ -87,5 +108,33 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toEndOf="@+id/tv_usuario_logado"
         app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/button_novo_placar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_novo_placar"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/button_estatisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_estatisticas"
+        app:layout_constraintTop_toBottomOf="@id/button_novo_placar"
+        app:layout_constraintStart_toStartOf="@id/button_novo_placar"
+        app:layout_constraintEnd_toEndOf="@id/button_novo_placar" />
+
+    <Button
+        android:id="@+id/button_ajustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_ajustes"
+        app:layout_constraintTop_toBottomOf="@id/button_estatisticas"
+        app:layout_constraintStart_toStartOf="@id/button_estatisticas"
+        app:layout_constraintEnd_toEndOf="@id/button_estatisticas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
