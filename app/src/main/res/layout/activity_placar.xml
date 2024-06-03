@@ -68,6 +68,18 @@
         android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_finalizar"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finalizar_jogo"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_diminuirtime_a"
+        app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
+        app:layout_constraintStart_toEndOf="@id/btn_diminuirtime_a"
+        app:layout_constraintTop_toBottomOf="@+id/rodada" />
+
 
     <EditText
         android:id="@+id/edt_time_b"
@@ -116,31 +128,29 @@
         android:id="@+id/rodada"
         android:layout_width="120dp"
         android:layout_height="150dp"
-        android:text="@string/tv_valor_rodada"
         android:background="@drawable/shape_desing_textview"
-        android:textColor="@color/white"
         android:gravity="center"
+        android:text="@string/tv_valor_rodada"
+        android:textColor="@color/white"
         android:textSize="80sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/tv_titulo_rodada"
         app:layout_constraintEnd_toEndOf="@id/tv_titulo_rodada"
-        app:layout_constraintTop_toBottomOf="@id/tv_titulo_rodada" />
+        app:layout_constraintStart_toStartOf="@id/tv_titulo_rodada"
+        app:layout_constraintTop_toTopOf="@+id/edt_time_a" />
 
 
     <TextView
         android:id="@+id/tv_titulo_rodada"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="80dp"
         android:text="@string/tv_titulo_rodada"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rodada"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rodada_up_button"
@@ -148,10 +158,9 @@
         android:layout_height="40dp"
         android:background="@drawable/arrow_drop_up_10"
         android:visibility="visible"
-        app:layout_constraintTop_toTopOf="@id/rodada"
-        app:layout_constraintStart_toStartOf="@id/rodada"
         app:layout_constraintEnd_toEndOf="@id/rodada"
-        />
+        app:layout_constraintStart_toStartOf="@id/rodada"
+        app:layout_constraintTop_toTopOf="@id/rodada" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rodada_down_button"
@@ -195,9 +204,9 @@
         android:text="@string/stop_button"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/timer_text_view"
-        app:layout_constraintEnd_toEndOf="@id/timer_text_view"
-        app:layout_constraintTop_toBottomOf="@id/timer_text_view"/>
+        app:layout_constraintStart_toStartOf="@id/btn_finalizar"
+        app:layout_constraintEnd_toEndOf="@id/btn_finalizar"
+        app:layout_constraintTop_toBottomOf="@id/btn_finalizar"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reset_button"
