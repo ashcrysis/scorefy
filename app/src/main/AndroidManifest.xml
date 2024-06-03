@@ -14,19 +14,9 @@
         tools:targetApi="31">
         <activity
             android:name=".placar_vertical"
-            android:exported="false" />
-        <activity
-            android:name=".contador_p2"
-            android:exported="false" />
-        <activity
-            android:name=".contadormain"
-            android:exported="false" />
-        <activity
-            android:name=".contador"
-            android:exported="false" />
-        <activity
-            android:name=".Timer1"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="sensor"/>
         <activity
             android:name=".cadastro"
             android:exported="false"
@@ -34,7 +24,8 @@
         <activity
             android:name=".placar"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="sensor"/>
         <activity
             android:name=".menu"
             android:exported="false"
@@ -54,7 +45,6 @@
             android:exported="true"
             android:screenOrientation="portrait" />
 
-        <service android:name=".TimerService" />
     </application>
 
 </manifest>

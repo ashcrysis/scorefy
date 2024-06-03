@@ -1,15 +1,18 @@
 package estacio.acad.mobplacar
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.util.*
+import androidx.lifecycle.ViewModelProvider
+import java.util.Locale
 
 class placar_vertical : AppCompatActivity() {
 
@@ -17,13 +20,21 @@ class placar_vertical : AppCompatActivity() {
     private lateinit var stopButton: Button
     private lateinit var resetButton: Button
     private lateinit var timerTextView: TextView
+    private lateinit var tv_rodada: TextView
+    private lateinit var tv_timea: TextView
+    private lateinit var tv_timeb: TextView
 
+    private val sharedViewModel: SharedViewModel by viewModels()
+
+    private var stopTime: Long = 0
     private var startTime: Long = 0
     private var isRunning: Boolean = false
     private val handler = Handler(Looper.getMainLooper())
-
+    private var hasRunned: Boolean = false
+    private var elapsedTime: Long = 0
     private var LAST_CLICK_TIME: Long = 0
     private val mDoubleClickInterval = 400 // Milliseconds
+    private var stoppedTime: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +46,73 @@ class placar_vertical : AppCompatActivity() {
             insets
         }
 
-        val username: String? = intent.getStringExtra("username")
+        initializeUI()
+        loadViewModelData()
+
+        // Start updating the chronometer
+        handler.post(object : Runnable {
+            override fun run() {
+                updateChronometer()
+                handler.postDelayed(this, 1000)
+            }
+        })
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        saveViewModelData()
+    }
+
+    private fun loadViewModelData() {
+        timerTextView.text = sharedViewModel.timerText
+        tv_rodada.text = sharedViewModel.rodada.toString()
+        tv_timea.text = sharedViewModel.timeAPoints.toString()
+        tv_timeb.text = sharedViewModel.timeBPoints.toString()
+        isRunning = sharedViewModel.isRunning
+        startTime = sharedViewModel.startTime
+        elapsedTime = sharedViewModel.elapsedTime
+        hasRunned = sharedViewModel.hasRunned
+
+        if (isRunning) {
+            startChronometer()
+        }
+    }
+
+    private fun saveViewModelData() {
+        sharedViewModel.timerText = timerTextView.text.toString()
+        sharedViewModel.rodada = tv_rodada.text.toString().toInt()
+        sharedViewModel.timeAPoints = tv_timea.text.toString().toInt()
+        sharedViewModel.timeBPoints = tv_timeb.text.toString().toInt()
+        sharedViewModel.isRunning = isRunning
+        sharedViewModel.startTime = startTime
+        sharedViewModel.elapsedTime = elapsedTime
+        sharedViewModel.hasRunned = hasRunned
+    }
+
+    private fun initializeUI() {
+        // Initialize UI elements and listeners
+        startButton = findViewById(R.id.start_button)
+        stopButton = findViewById(R.id.stop_button)
+        resetButton = findViewById(R.id.reset_button)
+        timerTextView = findViewById(R.id.timer_text_view)
+
+        tv_rodada = findViewById(R.id.rodada)
+        tv_timea = findViewById(R.id.tv_time_a_pontos)
+        tv_timeb = findViewById(R.id.tv_time_b_pontos)
+
+        startButton.setOnClickListener {
+            startChronometer()
+        }
+        stopButton.setOnClickListener {
+            stopChronometer()
+        }
+        resetButton.setOnClickListener {
+            resetChronometer()
+        }
 
         val button_up_rodada: Button = findViewById(R.id.rodada_up_button)
         val button_down_rodada: Button = findViewById(R.id.rodada_down_button)
-        val tv_rodada: TextView = findViewById(R.id.rodada)
+
         button_up_rodada.setOnClickListener {
             var Rodada = Integer.parseInt(tv_rodada.text.toString())
             Rodada += 1
@@ -58,9 +131,6 @@ class placar_vertical : AppCompatActivity() {
         val up_buttonb: Button = findViewById(R.id.btn_aumentartime_b)
         val down_buttonb: Button = findViewById(R.id.btn_diminuirtime_b)
 
-        val tv_timea: TextView = findViewById(R.id.tv_time_a_pontos)
-        val tv_timeb: TextView = findViewById(R.id.tv_time_b_pontos)
-
         up_buttona.setOnClickListener {
             var pontos: Int = Integer.parseInt(tv_timea.text.toString())
             pontos += 1
@@ -78,35 +148,29 @@ class placar_vertical : AppCompatActivity() {
             pontos += 1
             tv_timeb.text = pontos.toString()
         }
-
-        // Inicializando os botões e TextView do cronômetro
-        startButton = findViewById(R.id.start_button)
-        stopButton = findViewById(R.id.stop_button)
-        resetButton = findViewById(R.id.reset_button)
-        timerTextView = findViewById(R.id.timer_text_view)
-
-        startButton.setOnClickListener {
-            startChronometer()
+        down_buttonb.setOnClickListener {
+            var pontos: Int = Integer.parseInt(tv_timeb.text.toString())
+            pontos -= 1
+            tv_timeb.text = pontos.toString()
         }
-        stopButton.setOnClickListener {
-            stopChronometer()
-        }
-        resetButton.setOnClickListener {
-            resetChronometer()
-        }
-
-        // Atualizando o cronômetro em intervalos regulares
-        handler.post(object : Runnable {
-            override fun run() {
-                updateChronometer()
-                handler.postDelayed(this, 1000)
-            }
-        })
     }
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        saveViewModelData()
+      if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_placar)
+        }
 
+        // Reinitialize UI elements and restore the state
+        initializeUI()
+        loadViewModelData()
+    }
     private fun startChronometer() {
         if (!isRunning) {
-            startTime = System.currentTimeMillis()
+            if (!hasRunned) {
+                startTime = System.currentTimeMillis()
+                hasRunned = true
+            }
             isRunning = true
             startButton.isEnabled = false
             stopButton.isEnabled = true
@@ -118,24 +182,27 @@ class placar_vertical : AppCompatActivity() {
             isRunning = false
             startButton.isEnabled = true
             stopButton.isEnabled = false
+            stoppedTime = System.currentTimeMillis()
         }
     }
 
     private fun resetChronometer() {
         startTime = 0
+        elapsedTime = 0
         timerTextView.text = "00:00:00"
         startButton.isEnabled = true
-        stopButton.isEnabled = false
+        startTime = System.currentTimeMillis()
     }
 
     private fun updateChronometer() {
         if (isRunning) {
-            val elapsedTime = System.currentTimeMillis() - startTime
+            elapsedTime = System.currentTimeMillis() - startTime
             val seconds = (elapsedTime / 1000).toInt()
             val minutes = seconds / 60
-            val hours = minutes / 60
-            val displaySeconds = seconds % 60
-            val displayMinutes = minutes % 60
+            val hours = (minutes / 60)
+            val displaySeconds = (seconds % 60)
+            val displayMinutes = (minutes % 60)
+
             timerTextView.text = String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, displayMinutes, displaySeconds)
         }
     }
