@@ -60,6 +60,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
+        android:hint="@string/time_anome"
         android:textAlignment="center"
         android:background="@drawable/shape_desing_editext"
         android:textSize="16sp"

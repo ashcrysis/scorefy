@@ -27,7 +27,7 @@ class menu : AppCompatActivity() {
         val tv_username: TextView = findViewById(R.id.tv_user)
         tv_username.text = username + "."
         button.setOnClickListener {
-            val intent = Intent(this, placar::class.java)
+            val intent = Intent(this, placar_vertical::class.java)
             intent.putExtra("username" , username )
             startActivity(intent);
         }

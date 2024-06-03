@@ -65,6 +65,7 @@
         android:background="@drawable/shape_desing_editext"
         android:textAlignment="center"
         android:textSize="16sp"
+        android:hint="@string/time_anome"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
