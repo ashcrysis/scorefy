@@ -83,7 +83,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/execute_criar_conta"
         style="@style/button"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         android:textSize="12sp"
         android:layout_marginTop="15dp"

@@ -158,8 +158,8 @@ class placar : AppCompatActivity() {
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         saveViewModelData()
-        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(R.layout.activity_placar_vertical)
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_placar)
         }
 
         initializeUI()

@@ -19,15 +19,15 @@
     <string name="tv_time_a_pontos">0</string>
     <string name="tv_time_b_pontos">0</string>
     <string name="tv_titulo_rodada">Rodada</string>
+    <string name="start_button"> </string>
+    <string name="stop_button"> </string>
+    <string name="reset_button"> </string>
     <string name="tv_valor_rodada">0</string>
     <string name="tv_usuario_logado">Seja bem vindo,</string>
     <string name="texto_bt_adcionar">+</string>
     <string name="finalizar_jogo">FINALIZAR</string>
     <string name="cadastro_email">Email</string>
     <string name="titulo_tela_criar_conta">Criar conta</string>
-    <string name="start_button">></string>
-    <string name="stop_button">||</string>
-    <string name="reset_button">↺</string>
     <string name="timer_text_view">00:00:00</string>
     <string name="tv_titulo_time_a">TIME A</string>
     <string name="tv_titulo_time_b">TIME B</string>
@@ -35,4 +35,10 @@
     <string name="button_novo_placar">Novo placar</string>
     <string name="button_estatisticas">Estatísticas</string>
     <string name="button_ajustes">Ajustes</string>
+    <string name="time_a_item_reciclerview">Time A</string>
+    <string name="time_b_item_reciclerview">Time B</string>
+    <string name="time_versus_time">x</string>
+    <string name="time_a_pontos_reciclerview">0</string>
+    <string name="time_b_pontos_reciclerview">0</string>
+    <string name="timer_reciclerview">4 minutos</string>
 </resources>

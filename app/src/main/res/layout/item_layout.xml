@@ -17,7 +17,7 @@
             android:id="@+id/timea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Time A"
+            android:text="@string/time_a_item_reciclerview"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="20dp"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Time B"
+            android:text="@string/time_b_item_reciclerview"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/timea"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="x"
+            android:text="@string/time_versus_time"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/timea"
@@ -52,7 +52,7 @@
             android:id="@+id/time_a_pontos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/time_a_pontos_reciclerview"
             app:layout_constraintEnd_toEndOf="@+id/timea"
             app:layout_constraintStart_toStartOf="@+id/timea"
             app:layout_constraintTop_toBottomOf="@id/timea" />
@@ -61,7 +61,7 @@
             android:id="@+id/time_b_pontos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/time_b_pontos_reciclerview"
             app:layout_constraintEnd_toEndOf="@+id/timeb"
             app:layout_constraintStart_toStartOf="@+id/timeb"
             app:layout_constraintTop_toBottomOf="@id/timeb" />
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:text="4 minutos"
+            android:text="@string/timer_reciclerview"
             app:layout_constraintBottom_toBottomOf="@+id/timeb"
             app:layout_constraintStart_toStartOf="@+id/timeb"
             app:layout_constraintTop_toTopOf="@+id/timeb" />
