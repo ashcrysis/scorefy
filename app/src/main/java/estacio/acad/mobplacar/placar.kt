@@ -14,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import java.util.Locale
 
-
 class placar : AppCompatActivity() {
 
     private lateinit var startButton: Button
@@ -35,7 +34,7 @@ class placar : AppCompatActivity() {
     private var elapsedTime: Long = 0
     private var LAST_CLICK_TIME: Long = 0
     private val mDoubleClickInterval = 400 // Milliseconds
-    private var stoppedTime: Long = 0
+    private var stoppedTime: Long = 0 // Removido o duplicate declaration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -165,11 +164,46 @@ class placar : AppCompatActivity() {
         initializeUI()
         loadViewModelData()
     }
+    private var pausedTime: Long = 0
+    private var pausedTimerStartTime: Long = 0
+    private var pausedTimerElapsedTime: Long = 0
+    private var pausedTimerIsRunning: Boolean = false
+
+    private fun startPausedTimer() {
+        if (!pausedTimerIsRunning) {
+            pausedTimerStartTime = System.currentTimeMillis()
+            pausedTimerIsRunning = true
+        }
+    }
+
+    private fun stopPausedTimer() {
+        if (pausedTimerIsRunning) {
+            pausedTimerIsRunning = false
+            pausedTimerElapsedTime += System.currentTimeMillis() - pausedTimerStartTime
+        }
+    }
+
+    private fun resetPausedTimer() {
+        pausedTimerStartTime = 0
+        pausedTimerElapsedTime = 0
+        pausedTimerIsRunning = false
+    }
+
+    private fun updatePausedTimer() {
+        if (pausedTimerIsRunning) {
+            pausedTime = System.currentTimeMillis() - pausedTimerStartTime + pausedTimerElapsedTime
+        } else {
+            pausedTime = pausedTimerElapsedTime
+        }
+    }
+
     private fun startChronometer() {
         if (!isRunning) {
             if (!hasRunned) {
                 startTime = System.currentTimeMillis()
                 hasRunned = true
+            } else {
+                startPausedTimer()
             }
             isRunning = true
             startButton.isEnabled = false
@@ -180,9 +214,9 @@ class placar : AppCompatActivity() {
     private fun stopChronometer() {
         if (isRunning) {
             isRunning = false
-            startButton.isEnabled = true
             stopButton.isEnabled = false
             stoppedTime = System.currentTimeMillis()
+            stopPausedTimer()
         }
     }
 
@@ -192,18 +226,21 @@ class placar : AppCompatActivity() {
         timerTextView.text = "00:00:00"
         startButton.isEnabled = true
         startTime = System.currentTimeMillis()
+        resetPausedTimer()
     }
 
     private fun updateChronometer() {
         if (isRunning) {
-            elapsedTime = System.currentTimeMillis() - startTime
+            val currentTime = System.currentTimeMillis()
+            elapsedTime = currentTime - startTime - pausedTime
             val seconds = (elapsedTime / 1000).toInt()
             val minutes = seconds / 60
-            val hours = (minutes / 60)
+            val hours = minutes / 60
             val displaySeconds = (seconds % 60)
             val displayMinutes = (minutes % 60)
 
             timerTextView.text = String.format(Locale.getDefault(), "%02d:%02d:%02d", hours, displayMinutes, displaySeconds)
         }
     }
+
 }
