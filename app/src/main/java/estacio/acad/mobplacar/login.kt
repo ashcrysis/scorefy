@@ -1,5 +1,6 @@
 package estacio.acad.mobplacar
 
+import UserDatabaseHelper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,9 +15,11 @@ import androidx.core.view.isVisible
 
 class login : AppCompatActivity() {
     var clicked:Boolean = false;
+    private lateinit var dbHelper: UserDatabaseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        dbHelper = UserDatabaseHelper(this)
         val b_criar_conta: Button = findViewById(R.id.execute_criar_conta)
         val auth = simpleAuth();
         auth.addUser("asher","123456")
@@ -30,7 +33,7 @@ class login : AppCompatActivity() {
             val texto_nome: String = edit_name.text.toString()
             val texto_senha: String = edit_senha.text.toString()
 
-            if (auth.verifyCredentials(texto_nome,texto_senha))
+            if (dbHelper.checkUser(texto_nome,texto_senha))
             {
                 val intent = Intent(this, menu::class.java)
                 intent.putExtra("username",texto_nome)
@@ -44,10 +47,10 @@ class login : AppCompatActivity() {
 
         }
 
-
+3
         b_criar_conta.setOnClickListener {
 
-            val intent = Intent(this, cadastro::class.java)
+            val intent = Intent(this, cadastrar::class.java)
             startActivity(intent);
 
         }

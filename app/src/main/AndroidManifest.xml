@@ -13,19 +13,21 @@
         android:theme="@style/Theme.MobPlacar"
         tools:targetApi="31">
         <activity
-            android:name=".placar_vertical"
-            android:exported="false"
-            android:configChanges="orientation|screenSize|screenLayout"
-            android:screenOrientation="sensor"/>
+            android:name=".c"
+            android:exported="false" />
         <activity
-            android:name=".cadastro"
+            android:name=".cadastrar"
+            android:exported="false" />
+        <activity
+            android:name=".placar_vertical"
+            android:configChanges="orientation|screenSize|screenLayout"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="sensor" />
         <activity
             android:name=".placar"
-            android:exported="false"
             android:configChanges="orientation|screenSize|screenLayout"
-            android:screenOrientation="sensor"/>
+            android:exported="false"
+            android:screenOrientation="sensor" />
         <activity
             android:name=".menu"
             android:exported="false"
@@ -44,7 +46,6 @@
             android:name=".login"
             android:exported="true"
             android:screenOrientation="portrait" />
-
     </application>
 
 </manifest>
