@@ -26,6 +26,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="button_menu">
+        <item name="android:background">@drawable/shape_button_menu</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
     <style name="container">
         <item name="android:background">@drawable/shape_container</item>
     </style>

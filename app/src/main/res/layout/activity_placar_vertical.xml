@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_vertical_placar"
-    tools:context=".placar">
+    tools:context=".placar_vertical">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_aumentartime_a"
@@ -29,8 +30,7 @@
         android:text="@string/btn_diminuirtime_a"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_aumentartime_a"
-        app:layout_constraintEnd_toEndOf="@id/tv_time_a_pontos"
-        />
+        app:layout_constraintEnd_toEndOf="@id/tv_time_a_pontos"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_aumentartime_b"
@@ -64,9 +64,7 @@
         android:layout_height="50dp"
         android:background="@drawable/shape_desing_editext"
         android:textAlignment="center"
-        android:textSize="16sp"
-        android:hint="@string/time_anome"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -82,7 +80,7 @@
         android:textAlignment="center"
         android:background="@drawable/shape_desing_editext"
         android:textSize="16sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +92,7 @@
     <TextView
         android:id="@+id/tv_time_a_pontos"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:text="@string/tv_time_a_pontos"
         android:gravity="center"
         android:background="@drawable/shape_desing_textview"
@@ -108,7 +106,7 @@
     <TextView
         android:id="@+id/tv_time_b_pontos"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:text="@string/tv_time_b_pontos"
         android:gravity="center"
         android:background="@drawable/shape_desing_textview"
@@ -145,7 +143,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@id/btn_aumentartime_a"
         app:layout_constraintBottom_toTopOf="@+id/rodada"
         app:layout_constraintEnd_toEndOf="@+id/rodada"
@@ -180,48 +178,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/timer_text_view"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:padding="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/rodada"
         app:layout_constraintStart_toStartOf="@id/rodada"
         app:layout_constraintEnd_toEndOf="@id/rodada" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/start_button"
+        android:id="@+id/btn_finalizar"
         style="@style/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/finalizar_jogo"
+        android:textSize="17sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/timer_text_view"
+        app:layout_constraintStart_toStartOf="@id/timer_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:textSize="20sp"
-        android:text="@string/start_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/play_button"
+        app:layout_constraintBottom_toBottomOf="@id/stop_button"
         app:layout_constraintEnd_toStartOf="@id/stop_button"
-        app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"
-        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
+        app:layout_constraintStart_toEndOf="@+id/btn_diminuirtime_a"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/stop_button"
-        style="@style/button"
+        android:background="@drawable/stop_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:text="@string/stop_button"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@id/reset_button"
         app:layout_constraintStart_toEndOf="@id/start_button"
-        app:layout_constraintTop_toBottomOf="@id/timer_text_view" />
+        app:layout_constraintTop_toBottomOf="@id/btn_finalizar" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/reset_button"
-        style="@style/button"
+        android:background="@drawable/reset_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:text="@string/reset_button"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/stop_button"
         app:layout_constraintEnd_toStartOf="@+id/btn_aumentartime_b"
-        app:layout_constraintStart_toEndOf="@id/stop_button"
-        app:layout_constraintTop_toBottomOf="@+id/timer_text_view" />
+        app:layout_constraintStart_toEndOf="@id/stop_button" />
 
     <TextView
         android:id="@+id/tv_titulo_time_a"
@@ -232,8 +235,7 @@
         android:text="@string/tv_titulo_time_a"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@id/edt_time_a"
-        app:layout_constraintStart_toStartOf="@id/edt_time_a"
-         />
+        app:layout_constraintStart_toStartOf="@id/edt_time_a" />
 
     <TextView
         android:id="@+id/tv_titulo_time_b"
@@ -244,7 +246,6 @@
         android:text="@string/tv_titulo_time_b"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@id/edt_time_b"
-        app:layout_constraintStart_toStartOf="@id/edt_time_b"
-         />
+        app:layout_constraintStart_toStartOf="@id/edt_time_b" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
