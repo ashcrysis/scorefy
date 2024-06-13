@@ -20,14 +20,11 @@
             android:exported="false" />
         <activity
             android:name=".placar_vertical"
-            android:configChanges="orientation|screenSize|screenLayout"
             android:exported="false"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".placar"
-            android:configChanges="orientation|screenSize|screenLayout"
-            android:exported="false"
-            android:screenOrientation="sensor" />
+            android:exported="false" />
         <activity
             android:name=".menu"
             android:exported="false"

@@ -119,9 +119,12 @@ class placar_vertical : AppCompatActivity() {
             tv_rodada.text = Rodada.toString()
         }
 
+
         button_down_rodada.setOnClickListener {
             var Rodada = Integer.parseInt(tv_rodada.text.toString())
-            Rodada -= 1
+            if (Rodada > 0) {
+                Rodada -= 1
+            }
             tv_rodada.text = Rodada.toString()
         }
 
